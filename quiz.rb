@@ -15,22 +15,22 @@ file_answers = File.new(answers_path, "r:UTF-8")
 answers = file_answers.readlines
 file_answers.close
 
-number_questions = 0
+question_number = 0
 correct_answers = 0
 incorrect_answers = 0
 
-while number_questions < answers.size
-  puts questions[number_questions]
-  say = gets.to_i
+while question_number < answers.size
+  puts questions[question_number]
+  say = gets.to_s
 
-  if say == answers[number_questions].to_i
+  if say == answers[question_number].to_s
     puts "Верный ответ"
     correct_answers += 1
   else
-    puts "Неправильно. Правильный ответ: #{answers[number_questions]}"
-    incorrect_answers +=1
+    puts "Неправильно. Правильный ответ: #{answers[question_number]}"
+    incorrect_answers += 1
   end
-  number_questions += 1
+  question_number += 1
 end
 
 puts
