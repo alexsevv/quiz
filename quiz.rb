@@ -21,9 +21,9 @@ incorrect_answers = 0
 
 while question_number < answers.size
   puts questions[question_number]
-  say = gets.to_s
+  say = gets
 
-  if say == answers[question_number].to_s
+  if say == answers[question_number]
     puts "Верный ответ"
     correct_answers += 1
   else
